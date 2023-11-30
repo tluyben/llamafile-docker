@@ -15,3 +15,17 @@ docker-compose up -d
   - go to http://localhost:8080/
   - say 'hello'! 
   - you can upload an image and ask it to explain what's on it
+
+***troubleshooting***:
+  - if the error is
+```
+run-detectors: unable to find an interpreter for ./llamafile-server-0.1-llava-v1.5-7b-q4`
+```
+
+then try; 
+
+```
+   sudo wget -O /usr/bin/ape https://cosmo.zip/pub/cosmos/bin/ape-$(uname -m).elf
+    sudo sh -c "echo ':APE:M::MZqFpD::/usr/bin/ape:' >/proc/sys/fs/binfmt_misc/register"
+    sudo sh -c "echo ':APE-jart:M::jartsr::/usr/bin/ape:' >/proc/sys/fs/binfmt_misc/register"
+```

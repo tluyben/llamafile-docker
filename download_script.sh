@@ -13,5 +13,6 @@ fi
 chmod 755 "/data/$FILE_NAME"
 
 # Execute the binary
-/data/$FILE_NAME --host 0.0.0.0
+# sh -c for if mac has zsh issues
+sh -c "/data/$FILE_NAME --host 0.0.0.0"
 
