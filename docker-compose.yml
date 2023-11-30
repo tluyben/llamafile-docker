@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  llamafile-server:
+    build: .
+    volumes:
+      - ./data:/data
+    ports:
+      - "127.0.0.1:10001:8080"
+
