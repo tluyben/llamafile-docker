@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   llamafile-server:
-    image: ghcr.io/philippmundhenk/llamafile-docker
+    image: ghcr.io/tluyben/llamafile-docker
     volumes:
       - ./data:/data
     ports:
